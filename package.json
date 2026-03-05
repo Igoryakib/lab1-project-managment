@@ -1,0 +1,32 @@
+{
+	"name": "lab1-project-managment",
+	"version": "1.0.0",
+	"description": "Інтерфейс системи моніторингу та керування мікрокліматом теплиці. Проєкт розроблений у межах курсу \"Проєктування інформаційних систем\".",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"test:unit": "vitest run --exclude tests/e2e.spec.js",
+		"test:unit:coverage": "vitest run --coverage --exclude tests/e2e.spec.js",
+		"test:e2e": "playwright test",
+		"test:e2e:ui": "playwright test --ui"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Igoryakib/lab1-project-managment.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Igoryakib/lab1-project-managment/issues"
+	},
+	"homepage": "https://github.com/Igoryakib/lab1-project-managment#readme",
+	"devDependencies": {
+		"@playwright/test": "^1.58.2",
+		"@vitest/coverage-v8": "^3.2.4",
+		"@vitest/ui": "^3.2.4",
+		"@vue/test-utils": "^2.4.6",
+		"jsdom": "^27.0.1",
+		"vitest": "^3.2.4"
+	}
+}

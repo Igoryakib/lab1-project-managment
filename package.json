@@ -1,6 +1,7 @@
 {
 	"name": "lab1-project-managment",
 	"version": "1.0.0",
+	"type": "module",
 	"description": "Інтерфейс системи моніторингу та керування мікрокліматом теплиці. Проєкт розроблений у межах курсу \"Проєктування інформаційних систем\".",
 	"main": "index.js",
 	"scripts": {
@@ -8,7 +9,12 @@
 		"test:unit": "vitest run --exclude tests/e2e.spec.js",
 		"test:unit:coverage": "vitest run --coverage --exclude tests/e2e.spec.js",
 		"test:e2e": "playwright test",
-		"test:e2e:ui": "playwright test --ui"
+		"test:e2e:ui": "playwright test --ui",
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "eslint src/**/*.ts --fix",
+		"format": "prettier --write \"src/**/*.(ts,css,html)\""
 	},
 	"repository": {
 		"type": "git",
@@ -26,7 +32,13 @@
 		"@vitest/coverage-v8": "^3.2.4",
 		"@vitest/ui": "^3.2.4",
 		"@vue/test-utils": "^2.4.6",
+		"eslint": "^9.39.3",
+		"eslint-config-prettier": "^10.1.8",
 		"jsdom": "^27.0.1",
+		"prettier": "^3.8.1",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.56.1",
+		"vite": "^7.3.1",
 		"vitest": "^3.2.4"
 	}
 }

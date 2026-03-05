@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 	<head>
 		<meta charset="UTF-8" />
@@ -37,7 +37,7 @@
 	</head>
 	<body>
 		<h1>🌿 Панель керування теплицею</h1>
-
+		<h3 id="app-status"></h3>
 		<div class="panel">
 			<h2>Сенсори</h2>
 			<div id="temperature-display">🌡 Температура: <strong>24°C</strong></div>
@@ -48,7 +48,9 @@
 			<button id="pump-btn">Увімкнути насос</button>
 		</div>
 
-		<script>
+		<script type="module">
+			document.getElementById("app-status").textContent =
+				import.meta.env.VITE_APP_STATUS;
 			const pumpButton = document.getElementById("pump-btn");
 
 			pumpButton.addEventListener("click", () => {

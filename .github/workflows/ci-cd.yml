@@ -13,13 +13,13 @@ on:
       - main
       - develop
 
-cite_start]jobs:
+jobs:
   # Job для збірки та тестування
-  cite_start]build-and-test:
-    cite_start]name: Build and Test
-    cite_start]runs-on: ubuntu-latest
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
 
-    cite_start]steps:
+    steps:
       # Крок 1: Отримання коду з репозиторію
       - name: Checkout repository
         uses: actions/checkout@v4

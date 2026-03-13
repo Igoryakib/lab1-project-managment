@@ -1,3 +1,4 @@
+[![CI/CD Pipeline](https://github.com/Igoryakib/lab1-project-managment/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/Igoryakib/lab1-project-managment/actions/workflows/ci-cd.yml)
 # Greenhouse Frontend Dashboard 🌿📊
 
 Інтерфейс системи моніторингу та керування мікрокліматом теплиці. Проєкт розроблений у межах курсу "Проєктування інформаційних систем".

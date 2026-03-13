@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Greenhouse Dashboard</title>
+
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f4f7f6;
+				padding: 20px;
+			}
+			.panel {
+				background: white;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				margin-bottom: 20px;
+				max-width: 400px;
+			}
+			#pump-btn {
+				padding: 10px 20px;
+				border: none;
+				border-radius: 4px;
+				background-color: #e0e0e0;
+				color: #333;
+				font-weight: bold;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+			#pump-btn.active {
+				background-color: #4caf50;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>🌿 Панель керування теплицею</h1>
+		<h3 id="app-status"></h3>
+		<div class="panel">
+			<h2>Сенсори</h2>
+			<div id="temperature-display">🌡 Температура: <strong>24°C</strong></div>
+		</div>
+
+		<div class="panel">
+			<h2>Керування пристроями</h2>
+			<button id="pump-btn">Увімкнути насос</button>
+		</div>
+
+		<script type="module">
+			document.getElementById("app-status").textContent =
+				import.meta.env.VITE_APP_STATUS;
+			const pumpButton = document.getElementById("pump-btn");
+
+			pumpButton.addEventListener("click", () => {
+				pumpButton.classList.toggle("active");
+
+				if (pumpButton.classList.contains("active")) {
+					pumpButton.textContent = "Вимкнути насос";
+				} else {
+					pumpButton.textContent = "Увімкнути насос";
+				}
+			});
+		</script>
+	</body>
+</html>

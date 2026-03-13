@@ -22,6 +22,7 @@ Minimum Viable Product (MVP) — це веб-інтерфейс, який доз
 
 ## 📂 Структура проєкту
 
+
 Відповідно до поточної архітектури:
 
 - `src/css/` — файли стилів (layout, components, animations).

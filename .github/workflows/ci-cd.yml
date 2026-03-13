@@ -6,12 +6,12 @@ on:
   push:
     branches:
       - main
-      - develop
+      - dev
   # Запуск при створенні Pull Request
   pull_request:
     branches:
       - main
-      - develop
+      - dev
 
 jobs:
   # Job для збірки та тестування
